@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sknirwalinventorymanagementsystem 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sknirwalinventorymanagementsystem
+  template:
+    metadata:
+      labels:
+        app: sknirwalinventorymanagementsystem 
+    spec:
+      containers:
+        - name: sknirwalinventorymanagementsystem 
+          image: sapracontainerregistry.azurecr.io/sknirwalinventorymanagementsystem
+          ports:
+          - containerPort: 80
